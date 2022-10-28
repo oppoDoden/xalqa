@@ -46,9 +46,9 @@ def post_data(request):
 	names = serializer.data['name']
 	user = TgDB.objects.get(name=names)
 	if user.status == True:
-		req.get(f'https://api.telegram.org/bot5380344480:AAGzJDLwQFDL5gOaSxOJtDPlDRAJ8_Q6pcs/sendMessage?chat_id={user.chat_id}&text=https://djkh.herokuapp.com/api/showimg/{img_id}')	
+		req.get(f'https://api.telegram.org/bot1963925691:AAH2tG-i219Zato6EvW1uMYeuFBsYYK3EhE/sendMessage?chat_id={user.chat_id}&text=https://qutqaruvxalqasi.herokuapp.com/api/showimg/{img_id}')	
 	else:
-		req.get(f'https://api.telegram.org/bot5380344480:AAGzJDLwQFDL5gOaSxOJtDPlDRAJ8_Q6pcs/sendMessage?chat_id={user.chat_id}&text=Verification failed')	  
+		req.get(f'https://api.telegram.org/bot1963925691:AAH2tG-i219Zato6EvW1uMYeuFBsYYK3EhE/sendMessage?chat_id={user.chat_id}&text=Verification failed')	  
 	return Response(serializer.data)
 
 class TgUsers(generics.ListCreateAPIView):
